@@ -25,8 +25,9 @@ const Page: React.FC = () => {
                         <IonTitle size="large">{name}</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <ExploreContainer name={name} />
-                {name == "Genero" ? <Genero /> : null}
+                <ExploreContainer>
+                    {name == "Genero" ? <Genero /> : null}
+                </ExploreContainer>
             </IonContent>
         </IonPage>
     );
