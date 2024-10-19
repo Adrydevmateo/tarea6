@@ -1,29 +1,9 @@
 import { IonButton, IonInput, IonItem } from "@ionic/react";
 import { type FormEvent, useState, type SVGProps } from "react";
-
-type Genre = "male" | "female" | undefined
-
-type Response = {
-    count: number,
-    gender: Genre,
-    name: string,
-    probability: number
-}
+import { fetchGenre } from "../utils/fetch";
 
 export default function Genero() {
-    const [genre, setGenre] = useState<Genre>(undefined)
-
-    const fetchGenre = async (name: string) => {
-        try {
-            const url = `https://api.genderize.io/?name=${name}`
-            const res = await fetch(url)
-            if (!res.ok) throw new Error(res.statusText)
-            const data = await res.json()
-            return data
-        } catch (error) {
-            console.error(error)
-        }
-    }
+    const [genre, setGenre] = useState("")
 
     const submit = async (e: FormEvent) => {
         e.preventDefault()
@@ -31,9 +11,10 @@ export default function Genero() {
         const form = e.target as HTMLFormElement
         const formData = new FormData(form)
 
-        const userGenre = String(formData.get("genre"))
+        const userName = String(formData.get("name"))
 
-        const res: Response = await fetchGenre(userGenre)
+        const res = await fetchGenre(userName)
+        if (!res) return
         setGenre(res.gender)
     }
 
@@ -41,7 +22,7 @@ export default function Genero() {
         <div>
             <IonItem >
                 <form onSubmit={submit}>
-                    <IonInput name="genre" placeholder="Introduce tu nombre" />
+                    <IonInput name="name" placeholder="Introduce tu nombre" />
                     <IonButton type="submit">Adivina mi genero</IonButton>
                 </form>
                 <div style={{ "fontSize": "80px", paddingTop: "20px" }}>

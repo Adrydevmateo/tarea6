@@ -4,6 +4,7 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
 import Genero from './Genero';
 import Inicio from './Inicio';
+import Edad from './Edad';
 
 const Page: React.FC = () => {
 
@@ -31,6 +32,9 @@ const Page: React.FC = () => {
                 </ExploreContainer>
                 <ExploreContainer>
                     {name == "Genero" ? <Genero /> : null}
+                </ExploreContainer>
+                <ExploreContainer>
+                    {name == "Edad" ? <Edad /> : null}
                 </ExploreContainer>
             </IonContent>
         </IonPage>
