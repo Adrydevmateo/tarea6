@@ -1,10 +1,12 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
 import Genero from './Genero';
 import Inicio from './Inicio';
 import Edad from './Edad';
+import Pais from './Pais';
+import { chevronUpCircle } from 'ionicons/icons';
 
 const Page: React.FC = () => {
 
@@ -35,6 +37,9 @@ const Page: React.FC = () => {
                 </ExploreContainer>
                 <ExploreContainer>
                     {name == "Edad" ? <Edad /> : null}
+                </ExploreContainer>
+                <ExploreContainer>
+                    {name == "Pais" ? <Pais /> : null}
                 </ExploreContainer>
             </IonContent>
         </IonPage>
