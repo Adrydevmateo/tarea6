@@ -9,6 +9,7 @@ import Pais from './Pais';
 import { chevronUpCircle } from 'ionicons/icons';
 import Clima from './Clima';
 import Acerca from './Acerca';
+import Noticias from './Noticias';
 
 const Page: React.FC = () => {
 
@@ -45,6 +46,9 @@ const Page: React.FC = () => {
                 </ExploreContainer>
                 <ExploreContainer>
                     {name == "Clima" ? <Clima /> : null}
+                </ExploreContainer>
+                <ExploreContainer>
+                    {name == "Noticias" ? <Noticias /> : null}
                 </ExploreContainer>
                 <ExploreContainer>
                     {name == "Acerca" ? <Acerca /> : null}
