@@ -59,8 +59,8 @@ const appPages: AppPage[] = [
         mdIcon: warningSharp
     },
     {
-        title: 'Acerca De',
-        url: '/folder/Acerca-de',
+        title: 'Acerca',
+        url: '/folder/Acerca',
         iosIcon: warningOutline,
         mdIcon: warningSharp
     }
