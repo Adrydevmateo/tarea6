@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { archiveOutline, archiveSharp, earthOutline, earthSharp, heartOutline, heartSharp, homeOutline, homeSharp, hourglassOutline, hourglassSharp, mailOutline, mailSharp, maleFemaleOutline, maleFemaleSharp, newspaperOutline, newspaperSharp, paperPlaneOutline, paperPlaneSharp, personCircleOutline, personCircleSharp, rainyOutline, rainySharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -25,44 +25,44 @@ const appPages: AppPage[] = [
     {
         title: 'Inicio',
         url: '/folder/Inicio',
-        iosIcon: mailOutline,
-        mdIcon: mailSharp
+        iosIcon: homeOutline,
+        mdIcon: homeSharp
     },
     {
         title: 'Genero',
         url: '/folder/Genero',
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp
+        iosIcon: maleFemaleOutline,
+        mdIcon: maleFemaleSharp
     },
     {
         title: 'Edad',
         url: '/folder/Edad',
-        iosIcon: heartOutline,
-        mdIcon: heartSharp
+        iosIcon: hourglassOutline,
+        mdIcon: hourglassSharp
     },
     {
         title: 'Pais',
         url: '/folder/Pais',
-        iosIcon: archiveOutline,
-        mdIcon: archiveSharp
+        iosIcon: earthOutline,
+        mdIcon: earthSharp
     },
     {
         title: 'Clima',
         url: '/folder/Clima',
-        iosIcon: trashOutline,
-        mdIcon: trashSharp
+        iosIcon: rainyOutline,
+        mdIcon: rainySharp
     },
     {
         title: 'Noticias',
         url: '/folder/Noticias',
-        iosIcon: warningOutline,
-        mdIcon: warningSharp
+        iosIcon: newspaperOutline,
+        mdIcon: newspaperSharp
     },
     {
         title: 'Acerca',
         url: '/folder/Acerca',
-        iosIcon: warningOutline,
-        mdIcon: warningSharp
+        iosIcon: personCircleOutline,
+        mdIcon: personCircleSharp
     }
 ];
 
